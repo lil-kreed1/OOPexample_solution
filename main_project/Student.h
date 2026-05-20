@@ -65,6 +65,13 @@ public:
 		alive = student.alive*/;
 	}
 
+	~Student() {
+		cout << "student destructor..." << endl;
+		if (marks != NULL) {
+			delete[] marks;
+		}
+	}
+
 	string toString() {
 		string s = "student: ";
 		s += name;
